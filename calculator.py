@@ -116,6 +116,17 @@ class Divider(Calculator):
         """
         return left//right
 
+def test_add():
+    assert Adder().operate(5, 2) == 7
+
+def test_sub():
+    assert Subtractor().operate(5, 2) == 3
+
+def test_mul():
+    assert Multiplier().operate(5, 2) == 10
+
+def test_div():
+    assert Divider().operate(5, 2) == 2
 
 if __name__ == "__main__":
     import doctest
