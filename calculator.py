@@ -27,30 +27,32 @@ HW:
 1. Formatter + Linter + pre-commit hook
 2. Unit test: pytest + extensions
 3. Dockerfile creation(Miniconda base + requirements install)
-4. CircleCI(Automation test) / GitHub Actions : Formatting + Linting + Unit test
+4. CircleCI(Automation test) / GitHub Actions: Formatting + Linting + Unit test
 """
 
 from abc import ABC, abstractmethod
 
 
 class Calculator(ABC):
-    """Abstract calculator interface"""
+    """Abstract calculator interface."""
 
     @abstractmethod
-    def operate(self, x, y):
-        """Abstract method that is inherited by a specific mathmatical operations
+    def operate(self, left, right):
+        """Abstract method that is inherited by a specific mathmatical operations.
+
         Args:
-            x (int): left operand
-            y (int): right operand
+            left (int): left operand
+            right (int): right operand
 
         Returns:
             int: operation result
         """
-        pass
+
 
 class Adder(Calculator):
     """Add operation."""
-    def operate(self, x, y):
+
+    def operate(self, left, right):
         """Operate add.
 
         Test:
@@ -59,11 +61,13 @@ class Adder(Calculator):
         >>> Adder().operate(1, -2)
         -1
         """
-        return x+y
+        return left+right
+
 
 class Subtractor(Calculator):
     """Subract operation."""
-    def operate(self, x, y):
+
+    def operate(self, left, right):
         """Operate subtract.
 
         Test:
@@ -74,11 +78,13 @@ class Subtractor(Calculator):
         >>> Subtractor().operate(1, 2)
         -1
         """
-        return x-y
+        return left-right
+
 
 class Multiplier(Calculator):
     """Multiply operation."""
-    def operate(self, x, y):
+
+    def operate(self, left, right):
         """Operate multiply.
 
         Test:
@@ -89,11 +95,13 @@ class Multiplier(Calculator):
         >>> Multiplier().operate(5, 3)
         15
         """
-        return x*y
+        return left*right
+
 
 class Divider(Calculator):
     """Dividing operation."""
-    def operate(self, x, y):
+
+    def operate(self, left, right):
         """Operate divide.
 
         Test:
@@ -106,7 +114,7 @@ class Divider(Calculator):
         >>> Divider().operate(5, -2)
         -3
         """
-        return x//y
+        return left//right
 
 
 if __name__ == "__main__":
