@@ -1,6 +1,7 @@
 """Integer calculator including add, subtract, multiply, and divide.
 
 - Author: Jongkuk Lim
+- Email: lim.jeikei@gmail.com
 - Date: 2020. 09. 16.
 
 amix/vimrc
@@ -61,7 +62,7 @@ class Adder(Calculator):
         >>> Adder().operate(1, -2)
         -1
         """
-        return left+right
+        return left + right
 
 
 class Subtractor(Calculator):
@@ -78,7 +79,7 @@ class Subtractor(Calculator):
         >>> Subtractor().operate(1, 2)
         -1
         """
-        return left-right
+        return left - right
 
 
 class Multiplier(Calculator):
@@ -95,7 +96,7 @@ class Multiplier(Calculator):
         >>> Multiplier().operate(5, 3)
         15
         """
-        return left*right
+        return left * right
 
 
 class Divider(Calculator):
@@ -114,19 +115,28 @@ class Divider(Calculator):
         >>> Divider().operate(5, -2)
         -3
         """
-        return left//right
+        return left // right
+
 
 def test_add():
+    """Adder test function."""
     assert Adder().operate(5, 2) == 7
 
+
 def test_sub():
+    """Subtractor test function."""
     assert Subtractor().operate(5, 2) == 3
 
+
 def test_mul():
+    """Multiplier test function."""
     assert Multiplier().operate(5, 2) == 10
 
+
 def test_div():
+    """Divider test function."""
     assert Divider().operate(5, 2) == 2
+
 
 if __name__ == "__main__":
     import doctest
