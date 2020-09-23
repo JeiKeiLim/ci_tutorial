@@ -6,7 +6,7 @@ Testing calculator classes implemented in calculator.py.
  - Date: 2020. 09.22.
 """
 
-from calculator import Adder, Divider, Multiplier, Subtractor
+from src.calculator import Adder, Divider, Multiplier, Subtractor
 
 
 class TestCalculator:
