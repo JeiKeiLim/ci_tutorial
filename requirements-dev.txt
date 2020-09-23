@@ -13,6 +13,7 @@ flake8-docstrings == 1.5.0
 pytest-pylint == 0.17.0
 pytest-flake8 == 1.0.6
 pytest-mypy == 0.6.2
+pytest-cov == 2.10.1
 
 # generating requirements
 pipreqs
