@@ -46,3 +46,10 @@ jobs:
       - name: Unit test
         run: make test
 
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2
+        - name: Multi-job test
+          run: echo Multi job test!?
