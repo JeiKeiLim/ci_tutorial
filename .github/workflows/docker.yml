@@ -21,5 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Multi-job test
-        run: echo Multi job test!?
+      - name: Docker run
+        run: |
+            docker build --tag limjk/ci_tutorial .
+            docker run limjk/ci_tutorial .
